@@ -34,7 +34,7 @@ const CountryDetail = () => {
 
   return (
     <div className={darkMode ? 'dark' : ''}>
-      <div className='dark:bg-[#202C36]'>
+      <div className='dark:bg-[#202C36] min-h-csreen '>
         {' '}
         <div className='fixed top-0 w-full bg-white dark:bg-[#2b3844] dark:text-white z-10 shadow-md p-4'>
           <div className='flex justify-between items-center max-w-6xl mx-auto'>
@@ -48,7 +48,7 @@ const CountryDetail = () => {
            {/* <p> {darkMode ? 'Light Mode' : 'Dark Mode'}</p> */}
           </div>
         </div>
-        <div className='mt-16 p-4 md:p-12'>
+        <div className='mt-16 p-4 md:p-12 2xl:px-64 min-h-screen'>
           <button
             onClick={() => navigate(-1)}
             className='mb-4  hover:ring-gray-700 hover:ring-2 dark:hover:ring-2 dark:hover:ring-white text-black dark:text-white hover:text-zinc-500  dark:hover:text-gray-500 rounded-md'
@@ -76,7 +76,7 @@ const CountryDetail = () => {
                 <img
                   src={country.flags.svg}
                   alt={`Flag of ${country.name.common}`}
-                  className='w-full h-auto rounded-md'
+                  className='w-full h-auto max-h-[50vh] rounded-md'
                 />
               )}
             </div>
@@ -84,7 +84,7 @@ const CountryDetail = () => {
               <h1 className='text-4xl font-bold mb-6 dark:text-white'>
                 {country?.name?.common}
               </h1>
-              <div className='grid grid-cols-2 gap-x-4 dark:text-white text-base'>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-x-4 dark:text-white text-base'>
                 <div>
                   <p>
                     <span className='font-semibold'>Native Name:</span>{' '}
@@ -143,7 +143,7 @@ const CountryDetail = () => {
                 </div>
               </div>
 
-              <div className='flex justify-start items-center mt-4 gap-3'>
+              <div className='flex flex-col md:flex-row justify-start md:items-center mt-4 gap-3'>
                 <h3 className='font-semibold dark:text-white'>Border Countries:</h3>
                 <ul className='flex flex-wrap'>
                   {borderCountries.length === 0 && <p className='dark:text-white'>Not Available</p>}
