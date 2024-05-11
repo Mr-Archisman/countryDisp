@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Country } from '../types';
 import { fetchCountries } from '../services/countryService';
 import { Link } from 'react-router-dom';
